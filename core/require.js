@@ -23,5 +23,13 @@
  */
 
 (function(evaluate) {
-
+	/**
+	 * Resolves a javascript file.
+	 *
+	 * @param string file
+	 */
+	resolve = function(file) {
+		var corePath = __dirname + '/core/';
+		var apiPath = __dirname + '/api/';
+	}
 })(); 

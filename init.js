@@ -35,10 +35,13 @@ var global = this;
 	 *
 	 * @param scriptManager
 	 * @param logger
+	 * @param directory
 	 */
-	__init = function(scriptManager, logger) {
-		var fileSetup = _load('./fs.js');
-		var requireSetup = _load('./require.js');
+	__init = function(scriptManager, logger, directory) {
+		global.__dirname = directory;
+
+		var fileSetup = _load(__dirname + '/core/fs.js');
+		var requireSetup = _load(__dirname + '/core/require.js');
 
 		global.fs = fileSetup();
 
