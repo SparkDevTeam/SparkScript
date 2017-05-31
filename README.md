@@ -8,3 +8,13 @@ to use for advanced developers. So we created a new one, with an added spark. âœ
 
 ### Using in your launcher
 This is current **not** ready for use in launchers. Check back soon!
+
+### Contact Us
+Website : https://sparkdevs.net
+Twitter: https://twitter.com/SparkDevTeam
+
+##### Members
+* TheDiamondYT1
+  * Twitter: [@TheDiamondYT](https://twitter.com/TheDiamondYT)  
+* Akharote1
+  * Twitter: [@Akharote1](https://twitter.com/Akharote1) 
