@@ -10,11 +10,11 @@ to use for advanced developers. So we created a new one, with an added spark. âœ
 This is current **not** ready for use in launchers. Check back soon!
 
 ### Contact Us
-Website : https://sparkdevs.net
+Website : https://sparkdevs.net  
 Twitter: https://twitter.com/SparkDevTeam
 
 ##### Members
-* TheDiamondYT1
+* @TheDiamondYT1
   * Twitter: [@TheDiamondYT](https://twitter.com/TheDiamondYT)  
-* Akharote1
+* @Akharote1
   * Twitter: [@Akharote1](https://twitter.com/Akharote1) 
