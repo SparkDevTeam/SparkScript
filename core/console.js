@@ -22,12 +22,38 @@
  * LICENSE: LGPL
  */
 
-(function() {
-	log = function(text) {
+
+var console = {
+	/**
+	 * Logs a plain message to the console.
+	 *
+	 *     _log() must be implemented in a JavaScript interface in the launcher.
+	 *
+	 * @param string text
+	 */
+	log: function(text) {
 		_log(text);
 	},
 
-	warn = function(text) {
+	/**
+	 * Logs a yellow coloured message to the console.
+	 *
+	 *     _log() must be implemented in a JavaScript interface in the launcher.
+	 *
+	 * @param string text
+	 */
+	warn: function(text) {
+		_log(text);
+	},
+
+	/**
+	 * Logs a red coloured message to the console.
+	 *
+	 *     _log() must be implemented in a JavaScript interface in the launcher.
+	 *
+	 * @param string text
+	 */
+	error: function(text) {
 		_log(text);
 	}
-})(); 
+};

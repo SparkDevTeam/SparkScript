@@ -21,15 +21,53 @@
  *
  * LICENSE: LGPL
  */
-
-(function(evaluate) {
+var global = this;
+global.require = function(evaluate) {
 	/**
-	 * Resolves a javascript file.
+	 * Resolves a JavaScript file.
 	 *
-	 * @param string file
+	 * @param string id
 	 */
-	resolve = function(file) {
+	resolve = function(id) {
 		var corePath = __dirname + '/core/';
 		var apiPath = __dirname + '/api/';
+
+		if(fs.exists(corePath + id)) {
+			return corePath + id;
+		} else if(fs.exists(corePath + id + ".js")) {
+			return corePath + id + ".js";
+		} else {
+			throw "Canno't resolve module: " + id;
+		}
+	},
+
+	/**
+	 * Internal method for requiring a JavaScript file.
+	 * Developers should call require('module') instead.
+	 *
+	 * @internal
+	 *
+	 * @param string id
+	 */
+	_require = function(id) {
+		var moduleInfo,
+			head = '(function(exports,module,require,__filename,__dirname){';,
+			tail = '})',
+			code = '',
+			line = null;
+
+		var file = resolve(id);
+
+		while((line = fs.readFile(file)) !== null) {
+			code += line + "\n";
+		}
+
+		code = head + code + tail;
+
+		moduleInfo = {
+			loaded: false,
+			id: id,
+			exports: {}
+		};
 	}
-})(); 
+};

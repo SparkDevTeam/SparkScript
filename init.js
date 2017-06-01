@@ -40,10 +40,7 @@ var global = this;
 	__init = function(scriptManager, logger, directory) {
 		global.__dirname = directory;
 
-		var fileSetup = _load(__dirname + '/core/fs.js');
 		var requireSetup = _load(__dirname + '/core/require.js');
-
-		global.fs = fileSetup();
 
 		global.require = requireSetup(
 			function(code) {

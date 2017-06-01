@@ -34,9 +34,9 @@
 	readFile = function(file, encoding, callback) {
 		try {
 			var text = _readFile(file, encoding);
-			callback(null, text);
+			if(callback) callback(null, text);
 		} catch (e) {
-			callback(e, null);
+			if(callback) callback(e, null);
 		}
 	},
 
@@ -52,7 +52,18 @@
 		try {
 			_unlink(file);
 		} catch (e) {
-			callback(e);
+			if(callback) callback(e);
 		}
+	},
+
+	/**
+	 * Checks if a file is present on the system.
+	 *
+	 *    _exists() must be implemented in a JavaScript interface in the launcher.
+	 *
+	 * @param string   file
+	 */
+	exists = function(file) {
+		return _exists(file);
 	}
 })(); 

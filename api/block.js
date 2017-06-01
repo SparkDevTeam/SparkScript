@@ -21,7 +21,7 @@
  *
  * LICENSE: LGPL
  */
-
+ 
 (function() {
 	/** @var array */
 	var blocks = [];
